@@ -1,6 +1,6 @@
 [详细中文文档请点击](http://www.kancloud.cn/houguang/scrollreveal/111473)
 
-||属性||	默认值||	可选值||	描述||
+|属性|	默认值|	可选值|	描述|
 | -- | -- | -- | -- |
 |origin|	bottom	|'bottom', 'left', 'top', 'right'|	|
 |distance|	20px|	'5rem', '10%', '20vw'|	可以设置任何有效的css距离|
