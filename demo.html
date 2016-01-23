@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="scrollreveal.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+* {margin: 0;padding: 0;}
+div {width: 500px;height: 500px;}
+.div1 {background-color: #333;margin-top: 200px;}
+.div2 {background-color: #ccc;}
+.div3 {background-color: #999;}
+
+.div1_1 {background-color: #F00;width: 100px;height: 100px;margin-left: 100px;}
+.div1_2 {background-color: #Ff0;width: 100px;height: 100px;margin-left: 200px;}
+.div1_3 {background-color: #efefef;width: 100px;height: 100px; margin: 0 0 0 400px;}
+</style>
+</head>
+<body>
+<div class="div1" id="div1">
+    <div class="div1_1">123</div>
+    <div class="div1_2">123</div>
+    <div class="div1_3">123</div>
+</div>
+<div class="div2">
+    <div class="div2_1">123</div>
+    <div class="div2_2">123</div>
+    <div class="div2_3">123</div>
+</div>
+<div class="div3">
+    <div class="div3_1">123</div>
+    <div class="div3_2">123</div>
+    <div class="div3_3">123</div>
+</div>
+<script type="text/javascript">
+var sr = ScrollReveal({
+    reset:true,
+    duration:500,
+    easing:"linear"
+});
+sr.reveal(".div1 div",{
+    mobile:false,
+    viewFactor:0.5,
+    opacity:0.8,
+    scale:0.1,
+    reset:true,
+    viewOffset:{top:100,left:100},
+    afterReveal:function( domEl ){
+        console.log("afterReveal ->");
+        console.log(domEl);
+    },
+    afterReset:function( domEl ){
+        console.log("afterReset ->");
+        console.log(domEl);
+    },
+});
+sr.reveal(".div2");
+sr.reveal(".div3");
+</script>
+</body>
+</html>
